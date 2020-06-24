@@ -1,0 +1,24 @@
+{
+  "name": "noticeme",
+  "version": "0.0.2",
+  "description": "A NOTICE.txt generator for npm",
+  "main": "noticeme.js",
+  "bin": {
+    "noticeme": "cmd.js"
+  },
+  "keywords": [
+    "NOTICE",
+    "legal",
+    "license",
+    "spdx",
+    "clearlydefined",
+    "generator"
+  ],
+  "author": "Microsoft Open Source Programs Office",
+  "license": "MIT",
+  "repository": "https://github.com/clearlydefined/noticeme",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "read-package-tree": "^5.2.2"
+  }
+}
