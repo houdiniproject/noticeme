@@ -16,7 +16,7 @@
   ],
   "author": "Houdini Project and Microsoft Open Source Programs Office",
   "license": "MIT",
-  "repository": "https://github.com/clearlydefined/noticeme",
+  "repository": "https://github.com/houdiniproject/noticeme",
   "dependencies": {
     "node-fetch": "^2.6.0",
     "read-package-tree": "^5.2.2"
