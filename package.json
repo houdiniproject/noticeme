@@ -19,6 +19,7 @@
   "repository": "https://github.com/houdiniproject/noticeme",
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "read-package-tree": "^5.2.2"
+    "read-package-tree": "^5.2.2",
+    "yargs": "^15.4.0"
   }
 }
