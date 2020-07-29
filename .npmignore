@@ -1,0 +1,6 @@
+.vscode
+.gitignore
+.node-version
+*.log
+*.tgz
+.github
