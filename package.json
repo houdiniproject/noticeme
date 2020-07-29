@@ -1,5 +1,5 @@
 {
-  "name": "noticeme",
+  "name": "@houdiniproject/noticeme",
   "version": "1.0.0-pre1",
   "description": "A NOTICE.txt generator for npm",
   "main": "noticeme.js",
