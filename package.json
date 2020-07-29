@@ -1,10 +1,13 @@
 {
   "name": "noticeme",
-  "version": "0.0.3",
+  "version": "1.0.0-pre1",
   "description": "A NOTICE.txt generator for npm",
   "main": "noticeme.js",
   "bin": {
     "noticeme": "cmd.js"
+  },
+  "scripts": {
+    "noticeme": "./cmd.js"
   },
   "keywords": [
     "NOTICE",
@@ -18,6 +21,8 @@
   "license": "MIT",
   "repository": "https://github.com/houdiniproject/noticeme",
   "dependencies": {
+    "colors": "^1.4.0",
+    "diff": "^4.0.2",
     "node-fetch": "^2.6.0",
     "read-package-tree": "^5.2.2",
     "yargs": "^15.4.0"

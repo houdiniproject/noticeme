@@ -1,4 +1,5 @@
 // License: LGPL-3.0-or-later
+// Copyright (c) Houdini Project
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
