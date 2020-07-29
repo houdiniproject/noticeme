@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Copyright (c) Houdini Project
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 const noticeme = require('.');
@@ -22,10 +23,16 @@ const argv = yargs
     default: false,
     description: "update or create the notice file"
   })
+  .option('included', {
+    alias: 'i',
+    type: 'string',
+    default: null,
+    description: 'additional file containing packages where you copied in code from but which aren\'t dependencies'
+  })
   .help()
   .argv;
 
-noticeme('.').then(notice => {
+noticeme({path:'.', includedFile: argv.included}).then(notice => {
 
   if (!argv.update) {
     if (!fs.existsSync(argv.filename)){
