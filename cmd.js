@@ -6,7 +6,7 @@ const noticeme = require('.');
 require('colors');
 const fs = require('fs');
 const yargs = require('yargs');
-const Diff = require('diff');
+const diff_match_patch = require('diff-match-patch');
 
 const noticeFilename = "NOTICE"
 
@@ -40,20 +40,22 @@ noticeme({path:'.', includedFile: argv.included}).then(notice => {
       process.exit(1)
     }
     else {
-      diff = Diff.diffLines( fs.readFileSync(argv.filename).toString(),notice)
-        .filter((part) => part.added || part.removed)
+      const dmp = new diff_match_patch();
+      diff = dmp.diff_main( fs.readFileSync(argv.filename).toString(),notice)
+        .filter((part) => part[0] !== 0)
       if (diff.length > 0)
       {
         process.stderr.write(`The notice file ${argv.filename} must be updated\n`)
         diff.forEach((part) => {
+          const change = part[0] === -1 ? 'removed' : part[0] === 1 ? 'added' : ''
           // green for additions, red for deletions
-          const color = part.added ? 'green' :
-            part.removed ? 'red' : 'grey';
-          const prefix = part.added ? "+ " : part.removed ?  "- " : "";
-          const output = part.value.split('\n').map((i) => prefix + i).join('\n')
+          const color = change === 'added' ? 'green' :
+            change === 'removed' ? 'red' : 'grey';
+          const prefix = change === 'added' ? "+ " : change === 'removed' ?  "- " : "";
+          const output = part[1].split('\n').map((i) => prefix + i).join('\n')
           process.stderr.write(output[color]);
         });
-
+        process.stderr.write('\n')
         process.exit(2)
       }
       process.stdout.write(`The notice file ${argv.filename} is already up to date\n`)

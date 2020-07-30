@@ -22,7 +22,7 @@
   "repository": "https://github.com/houdiniproject/noticeme",
   "dependencies": {
     "colors": "^1.4.0",
-    "diff": "^4.0.2",
+    "diff-match-patch": "^1.0.5",
     "node-fetch": "^2.6.0",
     "read-package-tree": "^5.2.2",
     "yargs": "^15.4.0"
