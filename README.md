@@ -8,10 +8,10 @@ This is modified slightly to better meet the needs of the Houdini Project
 
 ```sh
 # verifies that your NOTICE file is up to date
-npx noticeme
+npx @houdiniproject/noticeme
 
 # updates or creates your NOTICE file
-npx noticeme --u
+npx @houdiniproject/noticeme -u
 ```
 
 ## Features
