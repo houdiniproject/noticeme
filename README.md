@@ -47,4 +47,4 @@ If you place the `included.json` file next to your `package.json` noticeme will 
 ## DISCLAIMER
 
 noticeme is helpful for creating NOTICE files but we make no warranty that it's accurate. It's your responsibility to comply with
-any applicable licenses of the package your use.
+any applicable licenses of the package you use.
