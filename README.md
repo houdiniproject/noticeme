@@ -1,8 +1,8 @@
 # NOTICEME
 
-A NOTICE generator for npm packages.
+A NOTICE generator and verifier for npm packages.
 
-This is modified slightly to better meet the needs of the Houdini Project
+This is modified slightly to better meet the needs of the Houdini Project.
 
 ## Usage
 
