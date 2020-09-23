@@ -45,6 +45,7 @@ class NoticeService {
   }
   
   // from: https://hackernoon.com/functional-javascript-resolving-promises-sequentially-7aac18c4431e
+  // permission given to include in open source code at: https://twitter.com/joelnet/status/1308879250402013187
   getSequentialPromises(funcs) {
     return funcs.reduce((promise, func) =>
       promise.then(result =>
