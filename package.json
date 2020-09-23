@@ -1,6 +1,6 @@
 {
   "name": "@houdiniproject/noticeme",
-  "version": "1.0.0",
+  "version": "1.1.0-pre1",
   "description": "A NOTICE.txt generator for npm",
   "main": "noticeme.js",
   "bin": {
@@ -23,6 +23,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "diff-match-patch": "^1.0.5",
+    "lodash": "^4.17.20",
     "node-fetch": "^2.6.0",
     "read-package-tree": "^5.2.2",
     "yargs": "^15.4.0"

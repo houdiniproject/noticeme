@@ -29,10 +29,18 @@ const argv = yargs
     default: null,
     description: 'additional file containing packages where you copied in code from but which aren\'t dependencies'
   })
+  .option('chunksize', {
+    alias: 's',
+    type: 'number',
+    default: null,
+    description: "Creating a notice with more than 250 packages can cause a timeout of ClearlyDefined.io. To avoid this,"+
+        "you can pass the number of packages to put into a single chunk here. In the end, they'll all get combined into a single" +
+        "NOTICE file."
+  })
   .help()
   .argv;
 
-noticeme({path:'.', includedFile: argv.included}).then(notice => {
+noticeme({path:'.', includedFile: argv.included, chunkSize: argv.chunksize}).then(notice => {
 
   if (!argv.update) {
     if (!fs.existsSync(argv.filename)){
@@ -67,4 +75,7 @@ noticeme({path:'.', includedFile: argv.included}).then(notice => {
     process.stdout.write(`The notice file ${argv.filename} is now up to date\n`)
     process.exit(0)
   }
+}).catch(error => {
+  process.stderr.write(`noticeme had the following error: ${error.toString()}`)
+  process.exit(3)
 });

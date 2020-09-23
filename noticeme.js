@@ -4,8 +4,9 @@
 
 const readPkgTree = require('read-package-tree');
 const fetch = require('node-fetch');
-const fs = require('fs')
-const pathMod = require('path')
+const fs = require('fs');
+const pathMod = require('path');
+const NoticeService = require('./noticeService');
 
 const npmjsCoordinates = ({ name, version }) =>
   'npm/npmjs/' + (name.includes('/') ? name : `-/${name}`) + `/${version}`;
@@ -14,7 +15,7 @@ function retrieveIncludedJson(path) {
   return fs.existsSync(path) ? JSON.parse(fs.readFileSync(path, 'utf8')).packages : [];
 }
 
-module.exports = function noticeme({path, includedFile, rpt=readPkgTree, http = fetch}) {
+module.exports = function noticeme({path, includedFile, chunkSize=0, rpt=readPkgTree, http = fetch}) {
   return new Promise((resolve, reject) => {
     rpt(path, function (err, { children }) {
       if (err) reject(err);
@@ -36,13 +37,13 @@ module.exports = function noticeme({path, includedFile, rpt=readPkgTree, http = 
             map((package) => npmjsCoordinates(package)));
       }
 
-      http('https://api.clearlydefined.io/notices', {
-        method: 'post',
-        body: JSON.stringify({ coordinates }),
-        headers: { 'Content-Type': 'application/json' },
+      const service = new NoticeService('https://api.clearlydefined.io/notices', http);
+      service.generateNotice(coordinates, chunkSize).then(json => 
+        resolve(json.content)
+      ).catch(error => {
+        reject(error);
       })
-        .then(res => res.json())
-        .then(json => resolve(json.content));
+
     });
   });
 }
