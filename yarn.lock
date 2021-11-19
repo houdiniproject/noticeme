@@ -12,7 +12,7 @@ __metadata:
     colors: ^1.4.0
     diff-match-patch: ^1.0.5
     lodash: ^4.17.20
-    node-fetch: ^2.6.0
+    node-fetch: ^3.0.0
     read-package-tree: ^5.2.2
     yargs: ^17.0.0
   bin:
@@ -109,6 +109,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"data-uri-to-buffer@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "data-uri-to-buffer@npm:4.0.0"
+  checksum: 51e8ba73a4a01a71e7df0c6fc60c85b281211642a1d888c6a9bfefc598769f484630697ccb1d977ff825f80848d9736445c666c8bf933e2eb6bddf164b55f38b
+  languageName: node
+  linkType: hard
+
 "debuglog@npm:^1.0.1":
   version: 1.0.1
   resolution: "debuglog@npm:1.0.1"
@@ -183,6 +190,24 @@ __metadata:
   version: 3.1.1
   resolution: "escalade@npm:3.1.1"
   checksum: 1e31ff50d66f47cd0dfffa702061127116ccf9886d1f54a802a7b3bc95b94cab0cbf5b145cc5ac199036df6fd9d1bb24af1fa1bfed87c94879e950fbee5f86d1
+  languageName: node
+  linkType: hard
+
+"fetch-blob@npm:^3.1.2":
+  version: 3.1.3
+  resolution: "fetch-blob@npm:3.1.3"
+  dependencies:
+    web-streams-polyfill: ^3.0.3
+  checksum: bf603a4c9ad0fc3dd0c560d1009840b465a396b39fcc31354c7ece5756b1cc6173e565ba23820e08ce8c52b302ea0a37ca93de00eea0257084cfd73e859792ee
+  languageName: node
+  linkType: hard
+
+"formdata-polyfill@npm:^4.0.10":
+  version: 4.0.10
+  resolution: "formdata-polyfill@npm:4.0.10"
+  dependencies:
+    fetch-blob: ^3.1.2
+  checksum: 525e045498be835665b7721f8a4b5b0fee10dc221247de977e89c20e4a91df8637f917d299bc30bd4b1dc2ff26e9d61f0aad75d1e7cb40e24eb9388e2c1fe903
   languageName: node
   linkType: hard
 
@@ -330,10 +355,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.0":
-  version: 2.6.1
-  resolution: "node-fetch@npm:2.6.1"
-  checksum: cbb171635e538162b977eac5dfe7a1e07a9a02e991924377a6435502291e2f823d306b95aabc455caebf4a118ccf836868462bc70ccc3095af02bb9da61fda37
+"node-fetch@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "node-fetch@npm:3.1.0"
+  dependencies:
+    data-uri-to-buffer: ^4.0.0
+    fetch-blob: ^3.1.2
+    formdata-polyfill: ^4.0.10
+  checksum: 250fd3057ed0a142003789ca18f7b3227ee3c4fccaf6f4a0beab4b6538ce253550b5811fe5fea34a34d927b182038741ef0a72bbb58c3ade27c451aeecddf0b5
   languageName: node
   linkType: hard
 
@@ -578,6 +607,13 @@ resolve@^1.10.0:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 940899bd4eacfa012ceecb10a5814ba0e8103da5243aa74d0d62f1f8a405efcd23e034fb7193e2d05b392870c53aabcb1f66439b062075cdcb28bc5d562a8ff6
+  languageName: node
+  linkType: hard
+
+"web-streams-polyfill@npm:^3.0.3":
+  version: 3.2.0
+  resolution: "web-streams-polyfill@npm:3.2.0"
+  checksum: f9b77f282b573bd100edcb70a3bdd53ff5a7bf18a2b99c1951d35246cfb8195f5697f90571bf1d1f6e7a1b0c2dd0d9c39ab93f3ba59750a80eaa31b0439f43a5
   languageName: node
   linkType: hard
 
