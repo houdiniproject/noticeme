@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3.0.2
       - uses: actions/setup-node@v3.3.0
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: node ./cmd.js
 
   publish-npm:
@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-node@v3.3.0
         with:
           registry-url: https://registry.npmjs.org/
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
@@ -37,7 +37,7 @@ jobs:
       - uses: actions/setup-node@v3.3.0
         with:
           registry-url: https://npm.pkg.github.com/
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
