@@ -536,7 +536,7 @@ PERFORMANCE OF THIS SOFTWARE.
 
 ------
 
-** yargs-parser; version 20.2.9 -- https://github.com/yargs/yargs-parser#readme
+** yargs-parser; version 21.0.1 -- https://github.com/yargs/yargs-parser#readme
 Copyright (c) 2016, Contributors
 
 Copyright (c) 2016, Contributors
@@ -2530,7 +2530,9 @@ terms above.
 
 ------
 
-** yargs; version 17.2.1 -- https://yargs.js.org/
+** yargs; version 17.5.1 -- https://yargs.js.org/
+Copyright 2014 Contributors (ben@npmjs.com)
+Copyright 2010 James Halliday (mail@substack.net)
 
 MIT License
 
@@ -2581,16 +2583,16 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ------
 
-** ansi-regex; version 5.0.0 -- https://github.com/chalk/ansi-regex#readme
+** ansi-regex; version 5.0.1 -- https://github.com/chalk/ansi-regex#readme
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 ** ansi-styles; version 4.2.1 -- https://github.com/chalk/ansi-styles#readme
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 ** is-fullwidth-code-point; version 3.0.0 -- https://github.com/sindresorhus/is-fullwidth-code-point#readme
 (c) Sindre Sorhus (https://sindresorhus.com)
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-** string-width; version 4.2.0 -- https://github.com/sindresorhus/string-width#readme
+** string-width; version 4.2.3 -- https://github.com/sindresorhus/string-width#readme
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-** strip-ansi; version 6.0.0 -- https://github.com/chalk/strip-ansi#readme
+** strip-ansi; version 6.0.1 -- https://github.com/chalk/strip-ansi#readme
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 MIT License
