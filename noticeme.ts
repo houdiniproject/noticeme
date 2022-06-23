@@ -2,45 +2,60 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-const readPkgTree = require('read-package-tree');
-const fetch = require('node-fetch');
-const fs = require('fs');
-const pathMod = require('path');
-const NoticeService = require('./noticeService');
+import readPkgTree from 'read-package-tree';
 
-const npmjsCoordinates = ({ name, version }) =>
+import fs from 'fs';
+import fetch from 'node-fetch';
+import NoticeService from './noticeService';
+
+
+const npmjsCoordinates = ({ name, version }: { name: string, version: string }): string =>
   'npm/npmjs/' + (name.includes('/') ? name : `-/${name}`) + `/${version}`;
 
-function retrieveIncludedJson(path) {
+function retrieveIncludedJson(path: string): { name: string; version: string; }[] {
   return fs.existsSync(path) ? JSON.parse(fs.readFileSync(path, 'utf8')).packages : [];
 }
 
-module.exports = function noticeme({path, includedFile, chunkSize=0, rpt=readPkgTree, http = fetch}) {
+function argNormalization(args: { path: string, includedFile: string | null, chunkSize?: number | null, rpt?: typeof readPkgTree | null, http?: typeof fetch }): { chunkSize: number; rpt: typeof readPkgTree; http: typeof fetch; path: string; includedFile: string | null; } {
+
+  return {
+    ...args,
+    chunkSize: args.chunkSize || 0,
+    rpt: args.rpt || readPkgTree,
+    http: args.http || fetch,
+  }
+
+}
+
+
+
+export default function noticeme(args: { path: string, includedFile: string | null, chunkSize?: number | null, rpt?: typeof readPkgTree | null, http?: typeof fetch }): Promise<string> {
+  const { path, includedFile, chunkSize, rpt, http } = argNormalization(args);
   return new Promise((resolve, reject) => {
     rpt(path, function (err, { children }) {
       if (err) reject(err);
 
       const pkgJsonLicenses = new Map();
-      let coordinates = children.map(({ package, children: more }) => {
+      let coordinates = children.map(({ package: pkg, children: more }) => {
         children.push(...more);
-        const coordinate = npmjsCoordinates(package);
+        const coordinate = npmjsCoordinates(pkg);
 
         // TODO: make use of these as fallback
-        pkgJsonLicenses.set(coordinate, package.license);
+        pkgJsonLicenses.set(coordinate, pkg.license);
 
         return coordinate;
       });
 
-     
-      if (includedFile){
+
+      if (includedFile) {
         coordinates = coordinates.concat(retrieveIncludedJson(includedFile).
-            map((package) => npmjsCoordinates(package)));
+          map((pkg) => npmjsCoordinates(pkg)));
       }
 
       const service = new NoticeService('https://api.clearlydefined.io/notices', http);
-      service.generateNotice(coordinates, chunkSize).then(json => 
+      service.generateNotice(coordinates, chunkSize).then((json) =>
         resolve(json.content)
-      ).catch(error => {
+      ).catch((error: any) => {
         reject(error);
       })
 
