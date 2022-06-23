@@ -209,8 +209,8 @@ Copyright 2018
 ------
 
 ** normalize-package-data; version 2.5.0 -- https://github.com/npm/normalize-package-data#readme
-Copyright (c) Meryn Stol
 Copyright (c) 2013 Meryn Stol
+Copyright (c) Meryn Stol 'Author
 
 This package contains code originally written by Isaac Z. Schlueter.
 Used with permission.
@@ -247,7 +247,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ------
 
 ** spdx-exceptions; version 2.3.0 -- https://github.com/kemitchell/spdx-exceptions.json#readme
-Copyright (c) 2010-2015 Linux Foundation and its Contributors.
+Copyright (c) 2010-2015 Linux Foundation and its Contributors
 
 Creative Commons Attribution 3.0 Unported CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE INFORMATION PROVIDED, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM ITS USE.
 
@@ -518,7 +518,7 @@ PERFORMANCE OF THIS SOFTWARE.
 ------
 
 ** yargs-parser; version 20.2.9 -- https://github.com/yargs/yargs-parser#readme
-Copyright (c) 2016
+Copyright (c) 2016, Contributors
 
 Copyright (c) 2016, Contributors
 
@@ -566,7 +566,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ** fs.realpath; version 1.0.0 -- https://github.com/isaacs/fs.realpath#readme
 Copyright (c) Isaac Z. Schlueter and Contributors
-Copyright Joyent, Inc. and other Node contributors.
+Copyright Joyent, Inc. and other Node contributors
 
 The ISC License
 
@@ -629,10 +629,10 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 ------
 
 ** cliui; version 7.0.4 -- https://github.com/yargs/cliui#readme
-Copyright (c) 2015
+Copyright (c) 2015, Contributors
 Copyright (c) npm, Inc. and Contributors
 ** y18n; version 5.0.8 -- https://github.com/yargs/y18n
-Copyright (c) 2015
+Copyright (c) 2015, Contributors
 
 Copyright (c) 2015, Contributors
 
@@ -683,7 +683,7 @@ SOFTWARE.
 ------
 
 ** debuglog; version 1.0.1 -- https://github.com/sam-github/node-debuglog
-Copyright Joyent, Inc. and other Node contributors.
+Copyright Joyent, Inc. and other Node contributors
 
 Copyright Joyent, Inc. and other Node contributors. All rights reserved.
 
@@ -1924,7 +1924,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------
 
 ** function-bind; version 1.1.1 -- https://github.com/Raynos/function-bind
-Copyright (c) 2013 Raynos.
+Copyright (c) 2013 Raynos
 
 Copyright (c) 2013 Raynos.
 
@@ -1952,6 +1952,7 @@ THE SOFTWARE.
 
 ** asap; version 2.0.6 -- https://github.com/kriskowal/asap#readme
 Copyright 2009-2014
+Copyright 2009-2014 Contributors
 
 
 Copyright 2009–2014 Contributors. All rights reserved.
@@ -2396,7 +2397,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ------
 
 ** color-convert; version 2.0.1 -- https://github.com/Qix-/color-convert#readme
-Copyright (c) 2011-2016, Heather Arthur and Josh Junon.
+Copyright (c) 2011-2016, Heather Arthur and Josh Junon
 Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>
 
 Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>
