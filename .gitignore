@@ -12,3 +12,5 @@ yarn-error.log
 
 # built js files
 *.js
+
+*.map
