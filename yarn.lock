@@ -13,7 +13,7 @@ __metadata:
     diff-match-patch: ^1.0.5
     lodash: ^4.17.20
     node-fetch: ^2.6.0
-    read-package-tree: ^5.2.2
+    read-package-tree: ^5.3.1
     yargs: ^17.0.0
   bin:
     noticeme: cmd.js
@@ -431,7 +431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"read-package-tree@npm:^5.2.2":
+"read-package-tree@npm:^5.3.1":
   version: 5.3.1
   resolution: "read-package-tree@npm:5.3.1"
   dependencies:
