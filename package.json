@@ -5,7 +5,9 @@
   "main": "noticeme.js",
   "bin": "cmd.js",
   "scripts": {
-    "noticeme": "./cmd.js"
+    "build": "tsc && chmod gu+x cmd.js",
+    "clean": "rm *.js",
+    "noticeme": "yarn build && ./cmd.js"
   },
   "keywords": [
     "NOTICE",
