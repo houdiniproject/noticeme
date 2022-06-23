@@ -9,7 +9,17 @@ import fs from 'fs';
 import fetch from 'node-fetch';
 import NoticeService from './noticeService';
 
-function rptPromise(rpt: typeof readPkgTree, path: string): Promise<readPkgTree.Node[]> {
+interface PackageNode {
+  name: string
+  package: {
+    name: string
+    version: string
+    license: string
+  }
+  children: PackageNode[]
+}
+
+function rptPromise(rpt: typeof readPkgTree, path: string): Promise<PackageNode[]> {
   return new Promise((resolve, reject) => {
     rpt(path, (err, { children }) => {
       if (err) reject(err)
