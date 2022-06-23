@@ -1,13 +1,10 @@
 // Copyright (c) Houdini Project
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
-
-import readPkgTree from 'read-package-tree';
-
-
 import fs from 'fs';
 import fetch from 'node-fetch';
 import NoticeService from './noticeService';
+import {Arborist} from '@npmcli/arborist';
 
 interface PackageNode {
   name: string
@@ -19,13 +16,10 @@ interface PackageNode {
   children: PackageNode[]
 }
 
-function rptPromise(rpt: typeof readPkgTree, path: string): Promise<PackageNode[]> {
-  return new Promise((resolve, reject) => {
-    rpt(path, (err, { children }) => {
-      if (err) reject(err)
-      resolve(children)
-    })
-  })
+async function arboristPromise(arborist: Arborist, path: string): Promise<PackageNode[]> {
+  const actual = (await arborist.loadActual());
+  
+  return Array.from(actual.children.entries()).sort((item) => item[0]).map((item) => item[1]);
 
 }
 
@@ -37,21 +31,21 @@ function retrieveIncludedJson(path: string): { name: string; version: string; }[
   return fs.existsSync(path) ? JSON.parse(fs.readFileSync(path, 'utf8')).packages : [];
 }
 
-function argNormalization(args: { path: string, includedFile: string | null, chunkSize?: number | null, rpt?: typeof readPkgTree | null, http?: typeof fetch }): { chunkSize: number; rpt: typeof readPkgTree; http: typeof fetch; path: string; includedFile: string | null; } {
+function argNormalization(args: { path: string, includedFile: string | null, chunkSize?: number | null, arborist?: Arborist | null, http?: typeof fetch }): { chunkSize: number; arborist: Arborist; http: typeof fetch; path: string; includedFile: string | null; } {
 
   return {
     ...args,
     chunkSize: args.chunkSize || 0,
-    rpt: args.rpt || readPkgTree,
+    arborist: args.arborist || new Arborist(),
     http: args.http || fetch,
   }
 
 }
 
 
-export default async function noticeme(args: { path: string, includedFile: string | null, chunkSize?: number | null, rpt?: typeof readPkgTree | null, http?: typeof fetch }): Promise<string> {
-  const { path, includedFile, chunkSize, rpt, http } = argNormalization(args);
-  const children = await rptPromise(rpt, path);
+export default async function noticeme(args: { path: string, includedFile: string | null, chunkSize?: number | null, arborist?: Arborist | null, http?: typeof fetch }): Promise<string> {
+  const { path, includedFile, chunkSize, arborist, http } = argNormalization(args);
+  const children = await arboristPromise(arborist, path);
 
   const pkgJsonLicenses = new Map();
   let coordinates = children.map(({ package: pkg, children: more }) => {
