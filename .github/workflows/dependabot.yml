@@ -36,8 +36,6 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 2
 
-      - run: git lfs pull --include .yarn/
-
       - name: Setup node
         uses: actions/setup-node@v2.4.1
         with:
