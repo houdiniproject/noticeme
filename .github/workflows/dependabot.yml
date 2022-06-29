@@ -56,10 +56,15 @@ jobs:
 
       - run: yarn dedupe
 
-      - name: Commit yarn.lock
+      - name: "Update NOTICE"
+        run: yarn noticeme --update
+
+      - name: Commit yarn.lock and NOTICE
         run: |
           git config user.name "dependabot-fix"
           git config user.email "dependabot-fix@example.com"
           git add yarn.lock
           git commit -m '[dependabot skip] Fix yarn.lock'
+          git add NOTICE
+          git commit -m '[dependabot skip] Update NOTICE'
           git push
