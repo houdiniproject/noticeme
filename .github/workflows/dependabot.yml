@@ -52,7 +52,7 @@ jobs:
 
       - run: git checkout HEAD~1 yarn.lock
 
-      - run: yarn install --skip-builds
+      - run: yarn install --mode=skip-build
 
       - run: yarn dedupe
 
