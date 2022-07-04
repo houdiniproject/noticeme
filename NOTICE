@@ -592,7 +592,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ------
 
-** lru-cache; version 7.10.1 -- https://github.com/isaacs/node-lru-cache#readme
+** lru-cache; version 7.12.0 -- https://github.com/isaacs/node-lru-cache#readme
 Copyright (c) Microsoft Corporation
 Copyright (c) 2010-2022 Isaac Z. Schlueter and Contributors
 
@@ -783,7 +783,7 @@ USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ------
 
-** minipass; version 3.3.3 -- https://github.com/isaacs/minipass#readme
+** minipass; version 3.3.4 -- https://github.com/isaacs/minipass#readme
 Copyright (c) 2017-2022 npm, Inc., Isaac Z. Schlueter, and Contributors
 
 The ISC License
@@ -829,7 +829,7 @@ Copyright (c) Isaac Z. Schlueter and Contributors
 Copyright (c) Isaac Z. Schlueter and Contributors
 ** nopt; version 5.0.0 -- https://github.com/npm/nopt#readme
 Copyright (c) Isaac Z. Schlueter and Contributors
-** npm-packlist; version 5.1.0 -- https://github.com/npm/npm-packlist#readme
+** npm-packlist; version 5.1.1 -- https://github.com/npm/npm-packlist#readme
 Copyright (c) Isaac Z. Schlueter and Contributors
 ** once; version 1.4.0 -- https://github.com/isaacs/once#readme
 Copyright (c) Isaac Z. Schlueter and Contributors
@@ -892,9 +892,9 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ** @npmcli/installed-package-contents; version 1.0.7 -- https://github.com/npm/installed-package-contents#readme
 Copyright (c) npm, Inc.
-** @npmcli/metavuln-calculator; version 3.1.0 -- https://github.com/npm/metavuln-calculator#readme
+** @npmcli/metavuln-calculator; version 3.1.1 -- https://github.com/npm/metavuln-calculator#readme
 Copyright (c) npm, Inc.
-** @npmcli/run-script; version 4.1.3 -- https://github.com/npm/run-script#readme
+** @npmcli/run-script; version 4.1.5 -- https://github.com/npm/run-script#readme
 Copyright (c) npm, Inc.
 ** bin-links; version 3.0.1 -- https://github.com/npm/bin-links#readme
 Copyright (c) npm, Inc.
@@ -2609,7 +2609,7 @@ SOFTWARE.
 Copyright (c) Microsoft Corporation.
 ** @types/lodash; version 4.14.182 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash
 Copyright (c) Microsoft Corporation
-** @types/node; version 18.0.0 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
+** @types/node; version 18.0.1 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
 Copyright (c) Microsoft Corporation
 ** @types/node-fetch; version 2.6.2 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node-fetch
 Copyright (c) Microsoft Corporation
