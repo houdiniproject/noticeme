@@ -39,7 +39,7 @@ jobs:
           restore-keys: ${{ runner.os }}-yarn-
       - run: yarn install --immutable
       - run: yarn build
-      - run: yarn npm publish --access public
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
@@ -59,6 +59,6 @@ jobs:
           restore-keys: ${{ runner.os }}-yarn-
       - run: yarn install --immutable
       - run: yarn build
-      - run: yarn npm publish
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
