@@ -6,3 +6,4 @@
 .github
 .yarn
 *.ts
+tsconfig.json
