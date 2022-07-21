@@ -4,7 +4,7 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
 import NoticeService from './noticeService';
-import {Arborist} from '@npmcli/arborist';
+import readPkgTree from 'read-package-tree';
 
 interface PackageNode {
   name: string
@@ -16,13 +16,6 @@ interface PackageNode {
   children: PackageNode[]
 }
 
-async function arboristPromise(arborist: Arborist, path: string): Promise<PackageNode[]> {
-  const actual = (await arborist.loadActual());
-  
-  return Array.from(actual.children.entries()).sort((item) => item[0]).map((item) => item[1]);
-
-}
-
 
 const npmjsCoordinates = ({ name, version }: { name: string, version: string }): string =>
   'npm/npmjs/' + (name.includes('/') ? name : `-/${name}`) + `/${version}`;
@@ -31,41 +24,55 @@ function retrieveIncludedJson(path: string): { name: string; version: string; }[
   return fs.existsSync(path) ? JSON.parse(fs.readFileSync(path, 'utf8')).packages : [];
 }
 
-function argNormalization(args: { path: string, includedFile: string | null, chunkSize?: number | null, arborist?: Arborist | null, http?: typeof fetch }): { chunkSize: number; arborist: Arborist; http: typeof fetch; path: string; includedFile: string | null; } {
+function argNormalization(args: { path: string, includedFile: string | null, chunkSize?: number | null, rpt?: typeof readPkgTree | null, http?: typeof fetch }): { chunkSize: number; rpt: typeof readPkgTree; http: typeof fetch; path: string; includedFile: string | null; } {
 
   return {
     ...args,
     chunkSize: args.chunkSize || 0,
-    arborist: args.arborist || new Arborist(),
+    rpt: args.rpt || readPkgTree,
     http: args.http || fetch,
   }
 
 }
 
 
-export default async function noticeme(args: { path: string, includedFile: string | null, chunkSize?: number | null, arborist?: Arborist | null, http?: typeof fetch }): Promise<string> {
-  const { path, includedFile, chunkSize, arborist, http } = argNormalization(args);
-  const children = await arboristPromise(arborist, path);
+export default async function noticeme(args: { path: string, includedFile: string | null, chunkSize?: number | null, rpt?: typeof readPkgTree | null, http?: typeof fetch }): Promise<string> {
+  const { path, includedFile, chunkSize, rpt, http } = argNormalization(args);
 
-  const pkgJsonLicenses = new Map();
-  let coordinates = children.map(({ package: pkg, children: more }) => {
-    children.push(...more);
-    const coordinate = npmjsCoordinates(pkg);
+ return new Promise((resolve, reject) => {
+    rpt(path, function (err:any, { children }:{children:PackageNode[]}) {
+      if (err) reject(err);
 
-    // TODO: make use of these as fallback
-    pkgJsonLicenses.set(coordinate, pkg.license);
+      const pkgJsonLicenses = new Map();
+      let coordinates = children.map(({ package:pkg, children: more }:PackageNode ) => {
+        children.push(...more);
+        const coordinate = npmjsCoordinates(pkg);
 
-    return coordinate;
+        // TODO: make use of these as fallback
+        pkgJsonLicenses.set(coordinate, pkg.license);
+
+        return coordinate;
+      });
+
+     
+      if (includedFile){
+        coordinates = coordinates.concat(retrieveIncludedJson(includedFile).
+            map((pkg) => npmjsCoordinates(pkg)));
+      };
+
+     
+      if (includedFile){
+        coordinates = coordinates.concat(retrieveIncludedJson(includedFile).
+            map((pkg) => npmjsCoordinates(pkg)));
+      }
+
+      const service = new NoticeService('https://api.clearlydefined.io/notices', http);
+      service.generateNotice(coordinates, chunkSize).then(json => 
+        resolve(json.content)
+      ).catch(error => {
+        reject(error);
+      })
+
+    });
   });
-
-
-  if (includedFile) {
-    coordinates = coordinates.concat(retrieveIncludedJson(includedFile).
-      map((pkg) => npmjsCoordinates(pkg)));
-  }
-
-  const service = new NoticeService('https://api.clearlydefined.io/notices', http);
-
-  const json = await service.generateNotice(coordinates, chunkSize)
-  return json.content;
 }
