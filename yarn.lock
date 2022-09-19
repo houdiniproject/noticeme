@@ -14,7 +14,7 @@ __metadata:
     "@types/node": ^18.0.0
     "@types/node-fetch": ^2.6.2
     "@types/read-package-tree": ^5.2.0
-    "@types/yargs": ^17.0.10
+    "@types/yargs": ^17
     colors: ^1.4.0
     diff-match-patch: ^1.0.5
     lodash: ^4.17.21
@@ -72,12 +72,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/yargs@npm:^17.0.10":
-  version: 17.0.10
-  resolution: "@types/yargs@npm:17.0.10"
+"@types/yargs@npm:^17":
+  version: 17.0.12
+  resolution: "@types/yargs@npm:17.0.12"
   dependencies:
     "@types/yargs-parser": "*"
-  checksum: f0673cbfc08e17239dc58952a88350d6c4db04a027a28a06fbad27d87b670e909f9cd9e66f9c64cebdd5071d1096261e33454a55868395f125297e5c50992ca8
+  checksum: 5b41d21d8624199f89db82209b2adab2e47867b3677e852fde65698be2ca48364b14c2e70cb0adc9bca4a2102c93dad2409cae0ad666ea36ae031ae1cb08a7b5
   languageName: node
   linkType: hard
 
