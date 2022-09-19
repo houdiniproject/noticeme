@@ -1,4 +1,4 @@
-** typescript; version 4.7.4 -- https://www.typescriptlang.org/
+** typescript; version 4.8.3 -- https://www.typescriptlang.org/
 (c) by W3C
 Copyright (c) 2018 WHATWG
 Copyright (c) Microsoft Corporation
@@ -2707,16 +2707,15 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ** @types/diff-match-patch; version 1.0.32 -- 
 Copyright (c) Microsoft Corporation.
-** @types/lodash; version 4.14.182 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash
+** @types/lodash; version 4.14.185 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash
 Copyright (c) Microsoft Corporation
-** @types/node; version 18.0.1 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
+** @types/node; version 18.7.18 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
 Copyright (c) Microsoft Corporation
 ** @types/node-fetch; version 2.6.2 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node-fetch
 Copyright (c) Microsoft Corporation
 ** @types/read-package-tree; version 5.2.0 -- 
 Copyright (c) Microsoft Corporation.
-** @types/yargs; version 17.0.10 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/yargs
-Copyright (c) Microsoft Corporation
+** @types/yargs; version 17.0.12 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/yargs
 ** @types/yargs-parser; version 21.0.0 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/yargs-parser
 Copyright (c) Microsoft Corporation
 ** tr46; version 0.0.3 -- https://github.com/Sebmaster/tr46.js#readme
