@@ -714,7 +714,7 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 ------
 
-** cliui; version 7.0.4 -- https://github.com/yargs/cliui#readme
+** cliui; version 8.0.1 -- https://github.com/yargs/cliui#readme
 Copyright (c) 2015, Contributors
 Copyright (c) npm, Inc. and Contributors
 ** y18n; version 5.0.8 -- https://github.com/yargs/y18n
@@ -2973,7 +2973,7 @@ SOFTWARE.
 
 ------
 
-** yargs; version 17.5.1 -- https://yargs.js.org/
+** yargs; version 17.6.0 -- https://yargs.js.org/
 Copyright 2014 Contributors (ben@npmjs.com)
 Copyright 2010 James Halliday (mail@substack.net)
 
