@@ -65,7 +65,7 @@ jobs:
         run: |
           cd .`git log -1 --pretty=%s | awk '{ print $8 }'`
           git add yarn.lock
-          git commit -m '[dependabot skip] Fix yarn.lock' -m "Related-Issue: https://github.com/dependabot/dependabot-core/issues/1297"
+          git commit -m '[dependabot skip] Fix yarn.lock'
 
       - name: Restore cache
         uses: actions/cache@v3.0.10
