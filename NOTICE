@@ -2709,7 +2709,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Copyright (c) Microsoft Corporation.
 ** @types/lodash; version 4.14.186 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash
 Copyright (c) Microsoft Corporation
-** @types/node; version 18.8.3 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
+** @types/node; version 18.11.0 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
 Copyright (c) Microsoft Corporation
 ** @types/node-fetch; version 2.6.2 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node-fetch
 Copyright (c) Microsoft Corporation
