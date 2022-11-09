@@ -6,10 +6,17 @@ on:
 jobs:
   # Batches Dependabot PRs into one by merging them into a combined branch, then raising a new PR
   dependabot-batcher:
-    name: 'Combine Dependabot PRs'
-    uses: 'Legal-and-General/dependabot-batcher@v1.0.2'
-    with:
-      token: ${{ secrets.YOUR_TOKEN }} #required
-      baseBranchName: 'main' #optional
-      batchBranchName: 'dep-batcher-updates' #optional
-      batchPullTitle: 'Dependabot Batcher Updates' #optional
+   runs-on: ubuntu-latest
+   steps:
+      - name: 'Checkout Repo'
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.DEPENDABOT_PAT }}
+      - name: 'Dependabot Batcher'
+        uses: Legal-and-General/dependabot-batcher@v1.0.2
+        with:
+          token: ${{ secrets.DEPENDABOT_PAT }}
+          baseBranchName: 'main'
+          batchBranchName: 'dep-batcher-updates' #optional
+          batchPullTitle: 'Dependabot Batcher Updates' #optional
+          
