@@ -80,11 +80,11 @@ __metadata:
   linkType: hard
 
 "@types/yargs@npm:^17.0.13":
-  version: 17.0.13
-  resolution: "@types/yargs@npm:17.0.13"
+  version: 17.0.15
+  resolution: "@types/yargs@npm:17.0.15"
   dependencies:
     "@types/yargs-parser": "*"
-  checksum: 0ab269abc2da2223cf0a8c16d578850fbe327d40fb85724b5c3f9f6cf38d03656ef699518c05d4df3bc337339ec6d0aad7df01682a9dca4783ad1ccc7336cf12
+  checksum: f6a12cf5fbfba6317fcbdf0fb545002bd37e48131f573c0b95473f1f245ba0e8ecfe859fcb43e972ff4dbd821944467d145419c5b12fdb0ba00cde886732097e
   languageName: node
   linkType: hard
 
