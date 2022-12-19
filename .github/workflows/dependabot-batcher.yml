@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout Repo"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.2.0
         with:
           token: ${{ secrets.DEPENDABOT_PAT }}
       - name: "Dependabot Batcher"
