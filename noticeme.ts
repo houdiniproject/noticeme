@@ -71,12 +71,6 @@ export default async function noticeme(args: { path: string, includedFile: strin
       map((pkg) => npmjsCoordinates(pkg)));
   };
 
-
-  if (includedFile) {
-    coordinates = coordinates.concat(retrieveIncludedJson(includedFile).
-      map((pkg) => npmjsCoordinates(pkg)));
-  }
-
   const service = new NoticeService('https://api.clearlydefined.io/notices', http);
   const notice = await service.generateNotice(coordinates, chunkSize)
   return notice.content;
