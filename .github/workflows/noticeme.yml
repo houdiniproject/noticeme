@@ -36,7 +36,7 @@ jobs:
       run: yarn --immutable
 
     - name: Update NOTICE-js
-      run: npx -y @houdiniproject/noticeme@^1 -f NOTICE -i included.json -u"
+      run: npx -y @houdiniproject/noticeme@^1 -f NOTICE -i included.json -u
     - name: configure git
       run: |
         git config user.name "notice-update@houdiniproject.org"
