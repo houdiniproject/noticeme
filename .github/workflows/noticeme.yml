@@ -30,7 +30,7 @@ jobs:
 
     - uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node }}
+        node-version-file: .node-version
         cache: 'yarn'
     - name: install via yarn
       run: yarn --immutable
@@ -43,8 +43,8 @@ jobs:
         git config user.email "notice-update@houdiniproject.org"
     - name: commit NOTICE-js if needed
       run: |
-        if ! git diff --exit-code NOTICE-js; then
-          git add NOTICE-js
+        if ! git diff --exit-code NOTICE; then
+          git add NOTICE
           git commit -m 'Update NOTICE for ${{ env.date }}'
           git checkout -b notice-update-$date
           git push --set-upstream origin notice-update-${{ env.date }} -f
