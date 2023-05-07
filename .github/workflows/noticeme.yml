@@ -1,0 +1,52 @@
+name: "Run noticeme"
+
+on:
+  schedule:
+    - cron: '34 1 * * 1'
+  workflow_dispatch:
+env:
+  GH_TOKEN: ${{ secrets.DEPENDABOT_PAT }}
+jobs:
+  noticeme:
+    name: Update JS notices
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+    - name: save Date
+      run: echo "date=$(date +%Y-%m-%d)" >> "$GITHUB_ENV"
+      shell: bash
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        # Using a Personal Access Token here is required to trigger workflows on our new commit.
+        # The default GitHub token doesn't trigger any workflows.
+        # See: https://github.community/t/push-from-action-does-not-trigger-subsequent-action/16854/2
+        token: ${{ secrets.DEPENDABOT_PAT }}
+        fetch-depth: 2
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node }}
+        cache: 'yarn'
+    - name: install via yarn
+      run: yarn --immutable
+
+    - name: Update NOTICE-js
+      run: npx -y @houdiniproject/noticeme@^1 -f NOTICE -i included.json -u"
+    - name: configure git
+      run: |
+        git config user.name "notice-update@houdiniproject.org"
+        git config user.email "notice-update@houdiniproject.org"
+    - name: commit NOTICE-js if needed
+      run: |
+        if ! git diff --exit-code NOTICE-js; then
+          git add NOTICE-js
+          git commit -m 'Update NOTICE for ${{ env.date }}'
+          git checkout -b notice-update-$date
+          git push --set-upstream origin notice-update-${{ env.date }} -f
+          gh pr create --fill
+        fi
