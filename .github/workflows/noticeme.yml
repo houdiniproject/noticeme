@@ -44,7 +44,7 @@ jobs:
     - name: commit NOTICE-js if needed
       run: |
         if ! git diff --exit-code NOTICE; then
-          git add NOTICE-js
+          git add NOTICE
           git commit -m 'Update NOTICE for ${{ env.date }}'
           git checkout -b notice-update-$date
           git push --set-upstream origin notice-update-${{ env.date }} -f
