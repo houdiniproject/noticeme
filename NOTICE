@@ -535,7 +535,7 @@ Copyright (c) Isaac Z. Schlueter and Contributors
 Copyright (c) Isaac Z. Schlueter and Contributors
 ** readdir-scoped-modules; version 1.1.0 -- https://github.com/npm/readdir-scoped-modules
 Copyright (c) Isaac Z. Schlueter and Contributors
-** semver; version 5.7.1 -- https://github.com/npm/node-semver#readme
+** semver; version 5.7.2 -- https://github.com/npm/node-semver#readme
 Copyright Isaac Z.
 Copyright Isaac Z. Schlueter
 Copyright (c) Isaac Z. Schlueter and Contributors
@@ -810,7 +810,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ------
 
-** node-fetch; version 2.6.11 -- https://github.com/bitinn/node-fetch
+** node-fetch; version 2.6.12 -- https://github.com/bitinn/node-fetch
 Copyright (c) 2016 David Frank
 
 The MIT License (MIT)
@@ -2711,7 +2711,7 @@ Copyright (c) Microsoft Corporation
 Copyright (c) Microsoft Corporation
 ** @types/node; version 18.13.0 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
 Copyright (c) Microsoft Corporation
-** @types/node-fetch; version 2.6.3 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node-fetch
+** @types/node-fetch; version 2.6.4 -- https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node-fetch
 Copyright (c) Microsoft Corporation
 ** @types/read-package-tree; version 5.2.0 -- 
 Copyright (c) Microsoft Corporation.
