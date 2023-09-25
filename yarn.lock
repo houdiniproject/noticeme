@@ -28,9 +28,9 @@ __metadata:
   linkType: soft
 
 "@types/diff-match-patch@npm:^1.0.32":
-  version: 1.0.33
-  resolution: "@types/diff-match-patch@npm:1.0.33"
-  checksum: 18de2b199e4fb31f72df36fd834b7a7550a3da79acf93028054d199f8e40ca379dcc195b6f940d1fc336939652a7698a8ab02cdaf5d7c76f09a6df672ff8f917
+  version: 1.0.34
+  resolution: "@types/diff-match-patch@npm:1.0.34"
+  checksum: 66be1b01f9c6af5430418db72bb33a6f703e07de9bb01de26e847db67573277b2ad6de7e8fdf8de661121b291dfc239e7893764952940fadb7f160d88569c972
   languageName: node
   linkType: hard
 
