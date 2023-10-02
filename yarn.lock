@@ -59,9 +59,9 @@ __metadata:
   linkType: hard
 
 "@types/read-package-tree@npm:^5.2.0":
-  version: 5.2.0
-  resolution: "@types/read-package-tree@npm:5.2.0"
-  checksum: 6f11528474b3ed877b4403e3f2bded96baa0e8c35cfb1ea0f87100837f0b467cc7ffe69b1ad1f20def9c5199427b4f1c59a7156798e739a46b023500f8ea88b3
+  version: 5.2.1
+  resolution: "@types/read-package-tree@npm:5.2.1"
+  checksum: 69a31719dd8e8fe890960bc777ca8cadf37568b251b931acde3f95e0e716e71328a9920efccc5f5df88dc119559385762159e95c160d3fbe5a2b521ea6d29078
   languageName: node
   linkType: hard
 
