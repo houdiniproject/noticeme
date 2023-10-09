@@ -9,3 +9,4 @@
 tsconfig.json
 yarn.lock
 .yarnrc.yml
+.nvmrc
