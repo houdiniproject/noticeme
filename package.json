@@ -36,5 +36,6 @@
     "@types/read-package-tree": "^5.2.0",
     "@types/yargs": "^17.0.13",
     "typescript": "^5.2"
-  }
+  },
+  "packageManager": "yarn@3.6.4"
 }
