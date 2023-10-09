@@ -13,6 +13,7 @@ __metadata:
     "@types/lodash": ^4.14
     "@types/node": ^18
     "@types/node-fetch": ^2.6.2
+    "@types/npmcli__arborist": ^5.6.2
     "@types/read-package-tree": ^5.2.0
     "@types/yargs": ^17.0.13
     colors: ^1.4.0
@@ -27,6 +28,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@npm/types@npm:*":
+  version: 1.0.2
+  resolution: "@npm/types@npm:1.0.2"
+  checksum: 895e8119291cb65384517cefa6401d8be12526a751018aea8a57d757dbd041f7f74b09aa64afc5d35fae1a64da109da375adb5c0c68f10c7a229e2796937223e
+  languageName: node
+  linkType: hard
+
+"@types/cacache@npm:*":
+  version: 17.0.0
+  resolution: "@types/cacache@npm:17.0.0"
+  dependencies:
+    "@types/node": "*"
+  checksum: b210ac3d4965b999653442360c4b7d354c91e1b566dca11da492551c51772400956a97f9b1cf0886307b4011a7c09fe2f54420edcdd7712e862700f2290b0827
+  languageName: node
+  linkType: hard
+
 "@types/diff-match-patch@npm:^1.0.32":
   version: 1.0.34
   resolution: "@types/diff-match-patch@npm:1.0.34"
@@ -38,6 +55,15 @@ __metadata:
   version: 4.14.191
   resolution: "@types/lodash@npm:4.14.191"
   checksum: ba0d5434e10690869f32d5ea49095250157cae502f10d57de0a723fd72229ce6c6a4979576f0f13e0aa9fbe3ce2457bfb9fa7d4ec3d6daba56730a51906d1491
+  languageName: node
+  linkType: hard
+
+"@types/node-fetch@npm:*":
+  version: 3.0.2
+  resolution: "@types/node-fetch@npm:3.0.2"
+  dependencies:
+    node-fetch: "*"
+  checksum: b9f97bc4219c37f70299133b36389719cf4adacad46cea80df70f77d4a9f6999ea5be18a1ab90b34239b684cae032adeec10756cce8d2ae81c17f5e4c56fd4e9
   languageName: node
   linkType: hard
 
@@ -58,10 +84,77 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/npm-package-arg@npm:*":
+  version: 6.1.2
+  resolution: "@types/npm-package-arg@npm:6.1.2"
+  checksum: 4beb5a2d96bd9ae4efd216276c3c3f7db2943f5a73d02e3e69e2198bb183c715b2272fc1720ccedec8958ebd8dda42dc0fb8825ced8e3cae8aef2bc0889dd4b3
+  languageName: node
+  linkType: hard
+
+"@types/npm-registry-fetch@npm:*":
+  version: 8.0.5
+  resolution: "@types/npm-registry-fetch@npm:8.0.5"
+  dependencies:
+    "@types/node": "*"
+    "@types/node-fetch": "*"
+    "@types/npm-package-arg": "*"
+    "@types/npmlog": "*"
+    "@types/ssri": "*"
+  checksum: e8af9f881bc46008fdd4d5a372ff6cf32489cce507c520407cddfc67c244636c2fa12e567307a9014d8519de02ffb70d88879366006aa8835fd61bffefc5fb2d
+  languageName: node
+  linkType: hard
+
+"@types/npmcli__arborist@npm:^5.6.2":
+  version: 5.6.2
+  resolution: "@types/npmcli__arborist@npm:5.6.2"
+  dependencies:
+    "@npm/types": "*"
+    "@types/cacache": "*"
+    "@types/npmcli__package-json": "*"
+    "@types/pacote": "*"
+  checksum: 394ca1b13f04843c91f61fa71cb67f6c9baecbf08b3c94ab9169344e6cad48407f2b581c0bf0dbe8b0055aaabfd348fa49ec34b69ef17d5f14534c094af922e7
+  languageName: node
+  linkType: hard
+
+"@types/npmcli__package-json@npm:*":
+  version: 4.0.1
+  resolution: "@types/npmcli__package-json@npm:4.0.1"
+  checksum: 6c3f825c15a8bb616e921ec46a5df1f7d2080fbea1b2871c0c7c1ea392d061c8faa26d6081ee863523913ef5066f25b54f0ce119a15d65925ebe5d587b206a81
+  languageName: node
+  linkType: hard
+
+"@types/npmlog@npm:*":
+  version: 4.1.4
+  resolution: "@types/npmlog@npm:4.1.4"
+  checksum: 740f7431ccfc0e127aa8d162fe05c6ce8aa71290be020d179b2824806d19bd2c706c7e0c9a3c9963cefcdf2ceacb1dec6988c394c3694451387759dafe0aa927
+  languageName: node
+  linkType: hard
+
+"@types/pacote@npm:*":
+  version: 11.1.6
+  resolution: "@types/pacote@npm:11.1.6"
+  dependencies:
+    "@types/node": "*"
+    "@types/npm-registry-fetch": "*"
+    "@types/npmlog": "*"
+    "@types/ssri": "*"
+  checksum: f710d83de5ecfd6351fe86781c95b5b63367fbb7964105f8b8b5e1b0a0a07eee74d23cc71a5046859785acde77359c6827075d86107a31959d39d6fc6c339814
+  languageName: node
+  linkType: hard
+
 "@types/read-package-tree@npm:^5.2.0":
   version: 5.2.1
   resolution: "@types/read-package-tree@npm:5.2.1"
   checksum: 69a31719dd8e8fe890960bc777ca8cadf37568b251b931acde3f95e0e716e71328a9920efccc5f5df88dc119559385762159e95c160d3fbe5a2b521ea6d29078
+  languageName: node
+  linkType: hard
+
+"@types/ssri@npm:*":
+  version: 7.1.2
+  resolution: "@types/ssri@npm:7.1.2"
+  dependencies:
+    "@types/node": "*"
+  checksum: a40e5591c5da215c977c044c2b877e4e951ca56e62293dd662201da8264562ce8bbc440424a924093c252eb8ec6341404f9bf7119dfeeabb155f6b734940a764
   languageName: node
   linkType: hard
 
@@ -201,6 +294,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"data-uri-to-buffer@npm:^4.0.0":
+  version: 4.0.1
+  resolution: "data-uri-to-buffer@npm:4.0.1"
+  checksum: 0d0790b67ffec5302f204c2ccca4494f70b4e2d940fea3d36b09f0bb2b8539c2e86690429eb1f1dc4bcc9e4df0644193073e63d9ee48ac9fce79ec1506e4aa4c
+  languageName: node
+  linkType: hard
+
 "debuglog@npm:^1.0.1":
   version: 1.0.1
   resolution: "debuglog@npm:1.0.1"
@@ -305,6 +405,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fetch-blob@npm:^3.1.2, fetch-blob@npm:^3.1.4":
+  version: 3.2.0
+  resolution: "fetch-blob@npm:3.2.0"
+  dependencies:
+    node-domexception: ^1.0.0
+    web-streams-polyfill: ^3.0.3
+  checksum: f19bc28a2a0b9626e69fd7cf3a05798706db7f6c7548da657cbf5026a570945f5eeaedff52007ea35c8bcd3d237c58a20bf1543bc568ab2422411d762dd3d5bf
+  languageName: node
+  linkType: hard
+
 "form-data@npm:^3.0.0":
   version: 3.0.1
   resolution: "form-data@npm:3.0.1"
@@ -313,6 +423,15 @@ __metadata:
     combined-stream: ^1.0.8
     mime-types: ^2.1.12
   checksum: b019e8d35c8afc14a2bd8a7a92fa4f525a4726b6d5a9740e8d2623c30e308fbb58dc8469f90415a856698933c8479b01646a9dff33c87cc4e76d72aedbbf860d
+  languageName: node
+  linkType: hard
+
+"formdata-polyfill@npm:^4.0.10":
+  version: 4.0.10
+  resolution: "formdata-polyfill@npm:4.0.10"
+  dependencies:
+    fetch-blob: ^3.1.2
+  checksum: 82a34df292afadd82b43d4a740ce387bc08541e0a534358425193017bf9fb3567875dc5f69564984b1da979979b70703aa73dee715a17b6c229752ae736dd9db
   languageName: node
   linkType: hard
 
@@ -623,6 +742,24 @@ __metadata:
   dependencies:
     brace-expansion: ^1.1.7
   checksum: c154e566406683e7bcb746e000b84d74465b3a832c45d59912b9b55cd50dee66e5c4b1e5566dba26154040e51672f9aa450a9aef0c97cfc7336b78b7afb9540a
+  languageName: node
+  linkType: hard
+
+"node-domexception@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "node-domexception@npm:1.0.0"
+  checksum: ee1d37dd2a4eb26a8a92cd6b64dfc29caec72bff5e1ed9aba80c294f57a31ba4895a60fd48347cf17dd6e766da0ae87d75657dfd1f384ebfa60462c2283f5c7f
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:*":
+  version: 3.3.2
+  resolution: "node-fetch@npm:3.3.2"
+  dependencies:
+    data-uri-to-buffer: ^4.0.0
+    fetch-blob: ^3.1.4
+    formdata-polyfill: ^4.0.10
+  checksum: 06a04095a2ddf05b0830a0d5302699704d59bda3102894ea64c7b9d4c865ecdff2d90fd042df7f5bc40337266961cb6183dcc808ea4f3000d024f422b462da92
   languageName: node
   linkType: hard
 
@@ -957,6 +1094,13 @@ __metadata:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 35703ac889d419cf2aceef63daeadbe4e77227c39ab6287eeb6c1b36a746b364f50ba22e88591f5d017bc54685d8137bc2d328d0a896e4d3fd22093c0f32a9ad
+  languageName: node
+  linkType: hard
+
+"web-streams-polyfill@npm:^3.0.3":
+  version: 3.2.1
+  resolution: "web-streams-polyfill@npm:3.2.1"
+  checksum: b119c78574b6d65935e35098c2afdcd752b84268e18746606af149e3c424e15621b6f1ff0b42b2676dc012fc4f0d313f964b41a4b5031e525faa03997457da02
   languageName: node
   linkType: hard
 
