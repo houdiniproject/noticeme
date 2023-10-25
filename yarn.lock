@@ -143,9 +143,9 @@ __metadata:
   linkType: hard
 
 "@types/read-package-tree@npm:^5.2.0":
-  version: 5.2.1
-  resolution: "@types/read-package-tree@npm:5.2.1"
-  checksum: 69a31719dd8e8fe890960bc777ca8cadf37568b251b931acde3f95e0e716e71328a9920efccc5f5df88dc119559385762159e95c160d3fbe5a2b521ea6d29078
+  version: 5.2.2
+  resolution: "@types/read-package-tree@npm:5.2.2"
+  checksum: 35d047b575f574b5c5760ffe4ea2620194a144f67dacffd707cd0749ae9b0bbeae5f1aaa1b9b99515e39a88548b91d4df75a363bf0b0d936384aeb05334b3add
   languageName: node
   linkType: hard
 
