@@ -105,14 +105,14 @@ __metadata:
   linkType: hard
 
 "@types/npmcli__arborist@npm:^5.6.2":
-  version: 5.6.3
-  resolution: "@types/npmcli__arborist@npm:5.6.3"
+  version: 5.6.4
+  resolution: "@types/npmcli__arborist@npm:5.6.4"
   dependencies:
     "@npm/types": "*"
     "@types/cacache": "*"
     "@types/npmcli__package-json": "*"
     "@types/pacote": "*"
-  checksum: 2ec6051f1bf4a2793247cd820ca465ebff8e30b6158ba176949d2c1b7cfcb842b0cba304613af5d1062df0570d1868f0ff7b6c890c982be03ec7b46761b52ec4
+  checksum: e4dfd8294154ce4c2110a093fb9a47fc9257566d6d6cf565b1136e7c6d2aee1ec3e2753c70ab721fe31cb46caa46b4d9da44004ab4d0317c381dc80943aa2dd9
   languageName: node
   linkType: hard
 
