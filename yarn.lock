@@ -45,9 +45,9 @@ __metadata:
   linkType: hard
 
 "@types/diff-match-patch@npm:^1.0.32":
-  version: 1.0.34
-  resolution: "@types/diff-match-patch@npm:1.0.34"
-  checksum: 66be1b01f9c6af5430418db72bb33a6f703e07de9bb01de26e847db67573277b2ad6de7e8fdf8de661121b291dfc239e7893764952940fadb7f160d88569c972
+  version: 1.0.35
+  resolution: "@types/diff-match-patch@npm:1.0.35"
+  checksum: 63483f6b0e41f111f4d55801643ee098e5423c81b79bd5d8b27fad8bdb868fba1299b767287948fded5505680541a3f970146fc3e61d68ec865525467fafba38
   languageName: node
   linkType: hard
 
