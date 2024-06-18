@@ -14,3 +14,23 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    groups:
+      development_minor:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
+      development_major:
+        dependency-type: development
+        update-types:
+          - major
+      production_minor:
+        dependency-type: production
+        update-types:
+          - minor
+          - patch
+      production_major:
+        dependency-type: production
+        update-types:
+          - major
+
