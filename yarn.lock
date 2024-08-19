@@ -28,7 +28,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@npm/types@npm:*":
+"@npm/types@npm:^1":
   version: 1.0.2
   resolution: "@npm/types@npm:1.0.2"
   checksum: 895e8119291cb65384517cefa6401d8be12526a751018aea8a57d757dbd041f7f74b09aa64afc5d35fae1a64da109da375adb5c0c68f10c7a229e2796937223e
@@ -105,15 +105,15 @@ __metadata:
   linkType: hard
 
 "@types/npmcli__arborist@npm:^5.6.2":
-  version: 5.6.9
-  resolution: "@types/npmcli__arborist@npm:5.6.9"
+  version: 5.6.10
+  resolution: "@types/npmcli__arborist@npm:5.6.10"
   dependencies:
-    "@npm/types": "*"
+    "@npm/types": ^1
     "@types/cacache": "*"
     "@types/node": "*"
     "@types/npmcli__package-json": "*"
     "@types/pacote": "*"
-  checksum: 063e7c3c09bef74c33a172909fa04080ace54be678ecc71356e1466e6329e3a29d6ee4680ce9b8fa51c9d6a2f21fec7f1a3bb44dee811c60c3fe77eddc6736d3
+  checksum: 5491a4a5fab8adcec303ad33e73190fc534e6d9b5a779268eb16420e21e6f82c0384776b63d46f67a9dcf73b3d359cc59a7f3925e662e129ca5f50c0f8be6b0c
   languageName: node
   linkType: hard
 
