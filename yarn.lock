@@ -13,7 +13,7 @@ __metadata:
     "@types/lodash": ^4.14
     "@types/node": ^18
     "@types/node-fetch": ^2.6.2
-    "@types/npmcli__arborist": ^5.6.2
+    "@types/npmcli__arborist": ^6.3.0
     "@types/read-package-tree": ^5.2.0
     "@types/yargs": ^17.0.13
     colors: ^1.4.0
@@ -104,16 +104,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/npmcli__arborist@npm:^5.6.2":
-  version: 5.6.11
-  resolution: "@types/npmcli__arborist@npm:5.6.11"
+"@types/npmcli__arborist@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "@types/npmcli__arborist@npm:6.3.0"
   dependencies:
     "@npm/types": ^1
     "@types/cacache": "*"
     "@types/node": "*"
     "@types/npmcli__package-json": "*"
     "@types/pacote": "*"
-  checksum: 2ca29e5d35e01c02d7870e7e5ac25c721025468482f80db3abeed3c6906e47266640fe5217aa30942fe575ac185b6b1b5fa81f1eeda8684ea5cd313b23608a7d
+  checksum: e0d4d8923132a351acbb487d31e816e737c448a079cdf0592ce7f79a6e6d5b058160b15b7434744fa46351a9d4b9b18cebd4ef66563a67d3a601d14442bf0c5e
   languageName: node
   linkType: hard
 
